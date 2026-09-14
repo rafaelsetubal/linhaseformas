@@ -4024,9 +4024,8 @@ footer {
     flex-shrink: 0 !important;
   }
 
-  /* Hero Section Mobile */
-  .hero,
-  .project-hero {
+  /* Hero Section Mobile (Home) */
+  .hero {
     height: 100svh !important;
     min-height: 520px !important;
     max-height: 840px !important;
@@ -4036,8 +4035,7 @@ footer {
     padding: 0 !important;
   }
 
-  .hero-card,
-  .project-hero-inner {
+  .hero-card {
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
@@ -4052,24 +4050,21 @@ footer {
     overflow: hidden !important;
   }
 
-  .hero-media,
-  .project-hero-bg {
+  .hero-media {
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    z-index: -2 !important;
+    z-index: 0 !important;
   }
 
-  .hero-media img,
-  .project-hero-bg img {
+  .hero-media img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
   }
 
-  .hero-card::after,
-  .project-hero-inner::after {
+  .hero-card::after {
     content: "" !important;
     position: absolute !important;
     inset: 0 !important;
@@ -4078,8 +4073,7 @@ footer {
     z-index: 1 !important;
   }
 
-  .hero-content,
-  .project-hero-copy {
+  .hero-content {
     position: relative !important;
     left: auto !important;
     right: auto !important;
@@ -4093,24 +4087,21 @@ footer {
     z-index: 3 !important;
   }
 
-  .eyebrow,
-  .project-hero-copy .kicker {
+  .eyebrow {
     font-size: 9px !important;
     letter-spacing: 0.16em !important;
     margin-bottom: 8px !important;
     opacity: 0.9 !important;
   }
 
-  .hero h1,
-  .project-hero h1 {
+  .hero h1 {
     font-size: clamp(28px, 8vw, 38px) !important;
     line-height: 1.05 !important;
     letter-spacing: -0.035em !important;
     margin: 0 0 10px 0 !important;
   }
 
-  .hero-copy,
-  .project-hero-copy p {
+  .hero-copy {
     font-size: 13px !important;
     line-height: 1.5 !important;
     margin: 0 0 16px 0 !important;
@@ -4124,17 +4115,132 @@ footer {
     padding: 0 0 6px !important;
   }
 
-  .hero-card .inner-frame,
-  .project-hero-inner .inner-frame {
+  .hero-card .inner-frame {
     inset: 10px !important;
     border-radius: 10px !important;
     border-width: 1px !important;
   }
 
   .hero-index,
-  .project-no,
   .scroll,
-  .hero-sign,
+  .hero-sign {
+    display: none !important;
+  }
+
+  /* Case Study Hero Mobile (projeto-01, projeto-02, projeto-03) */
+  .project-hero {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(440px, 62svh, 540px) !important;
+    max-height: none !important;
+    background: #0e0d0c !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    padding: clamp(100px, 14vh, 120px) 20px 32px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .project-hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+  }
+
+  .project-hero-bg img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 35% !important;
+    display: block !important;
+    filter: brightness(0.85) contrast(1.05) !important;
+  }
+
+  .project-hero-scrim {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 2 !important;
+    background: linear-gradient(
+      180deg,
+      rgba(14, 13, 12, 0.45) 0%,
+      rgba(14, 13, 12, 0.15) 30%,
+      rgba(14, 13, 12, 0.78) 72%,
+      rgba(14, 13, 12, 0.98) 100%
+    ) !important;
+    pointer-events: none !important;
+  }
+
+  .project-hero-inner {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    display: block !important;
+    border: none !important;
+    background: none !important;
+  }
+
+  .project-hero-inner::after {
+    display: none !important;
+  }
+
+  .project-hero-content {
+    position: relative !important;
+    z-index: 4 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .project-hero-content .breadcrumb-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-family: var(--font-mono) !important;
+    font-size: 9.5px !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: var(--warm) !important;
+    margin-bottom: 12px !important;
+  }
+
+  .project-hero-content .breadcrumb-nav a {
+    color: rgba(241, 236, 227, 0.75) !important;
+    text-decoration: none !important;
+  }
+
+  .project-hero-content .breadcrumb-nav strong {
+    color: var(--warm) !important;
+  }
+
+  .project-hero-content h1 {
+    font-family: var(--font-sans) !important;
+    font-size: clamp(26px, 7.5vw, 36px) !important;
+    font-weight: 400 !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.035em !important;
+    color: #ffffff !important;
+    margin: 0 0 10px 0 !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .project-hero-content .hero-copy {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: rgba(241, 236, 227, 0.88) !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .project-no,
   .project-hero-desc,
   .project-hero-cat {
     display: none !important;
