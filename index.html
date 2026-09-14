@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linhas & Formas — Móveis Planejados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..600;1,9..40,400..600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="header-home">
+    <div class="header-left">
+      <span class="header-city">Itabuna — BA</span>
+    </div>
+    <a class="logo" href="index.html" aria-label="Linhas e Formas — Página Inicial">
+      LINHAS &amp; FORMAS<small>MÓVEIS PLANEJADOS</small>
+    </a>
+    <div class="header-right">
+      <a class="wa magnetic" href="https://wa.me/5573988541250" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp com a Linhas &amp; Formas">
+        <i></i> WhatsApp
+      </a>
+      <button class="menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menuOverlay">
+        <span class="menu-label">Menu</span>
+        <span class="menu-icon"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Overlay Editorial Cinematográfico — Duas Colunas com Preview -->
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <div class="menu-overlay-body">
+      <div class="menu-overlay-head">
+        <div class="menu-overlay-logo">LINHAS &amp; FORMAS<small>MÓVEIS PLANEJADOS</small></div>
+        <button class="menu-close-btn" aria-label="Fechar menu">
+          Fechar <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <div class="menu-overlay-inner">
+        <div class="menu-col-main">
+          <span class="menu-col-label">Navegação Editorial</span>
+          <nav class="menu-nav-main" aria-label="Menu principal">
+            <a href="index.html" class="active" data-preview-img="assets/images/unsplash/hero-home.jpg" data-preview-cat="01 · Início" data-preview-sub="Residência, Design &amp; Interiores">
+              <span class="menu-num">01</span> Início
+            </a>
+            <a href="projetos.html" data-preview-img="assets/images/unsplash/hero-projetos.jpg" data-preview-cat="02 · Portfólio" data-preview-sub="Projetos Reais sob Medida">
+              <span class="menu-num">02</span> Projetos
+            </a>
+            <a href="index.html#ambientes" class="menu-close-link" data-preview-img="assets/images/cozinhas.png" data-preview-cat="03 · Ambientes" data-preview-sub="Cozinhas, Dormitórios, Closets e Salas">
+              <span class="menu-num">03</span> Ambientes
+            </a>
+            <a href="index.html#processo" class="menu-close-link" data-preview-img="assets/images/unsplash/process-marcenaria.jpg" data-preview-cat="04 · Processo" data-preview-sub="Medição, Projeto 3D, Produção &amp; Instalação">
+              <span class="menu-num">04</span> Processo
+            </a>
+            <a href="index.html#contato" class="menu-close-link" data-preview-img="assets/images/unsplash/material-texturas.jpg" data-preview-cat="05 · Contato" data-preview-sub="Atendimento Dedicado · Itabuna — BA">
+              <span class="menu-num">05</span> Contato
+            </a>
+          </nav>
+        </div>
+
+        <div class="menu-col-preview" aria-hidden="true">
+          <div class="menu-preview-frame">
+            <div class="menu-preview-media">
+              <img id="menuPreviewImg" src="assets/images/unsplash/hero-home.jpg" alt="Preview da seção" loading="eager" decoding="async">
+            </div>
+            <div class="menu-preview-caption">
+              <span class="menu-preview-cat" id="menuPreviewCat">01 · Início</span>
+              <span class="menu-preview-sub" id="menuPreviewSub">Residência, Design &amp; Interiores</span>
+            </div>
+            <div class="inner-frame"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-overlay-subgrid">
+        <div class="menu-sub-item">
+          <span class="menu-sub-label">Ações Rápidas</span>
+          <div class="menu-sub-links">
+            <a href="projetos.html">Ver portfólio completo ↗</a>
+            <a href="https://wa.me/5573988541250" target="_blank" rel="noopener noreferrer">Falar no WhatsApp ↗</a>
+          </div>
+        </div>
+        <div class="menu-sub-item">
+          <span class="menu-sub-label">Showroom &amp; Fábrica</span>
+          <p class="menu-sub-text">R. Belém, 620 — Santo Antônio · Itabuna — BA<br>Segunda a Sexta · 08h às 18h</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-overlay-footer" aria-hidden="true">
+      <span>R. Belém, 620 — Santo Antônio · Itabuna — BA</span>
+      <span>(73) 98854-1250 · @linhaseformas.mp</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-media">
+          <img src="assets/images/unsplash/hero-home.jpg" alt="Projeto de interiores Linhas &amp; Formas" fetchpriority="high" loading="eager" decoding="async" width="1920" height="1080">
+        </div>
+        <div class="inner-frame" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="eyebrow">LINHAS &amp; FORMAS · ITABUNA — BA</div>
+          <h1>Seu ambiente.<br>Do seu jeito.</h1>
+          <p class="hero-copy">Móveis planejados que unem qualidade, elegância e funcionalidade em cada detalhe.</p>
+          <a class="outline-btn magnetic" href="projetos.html">Conheça nossos projetos ↗</a>
+        </div>
+        <div class="hero-index" aria-hidden="true">
+          <b class="active">01</b><span>02</span><span>03</span><span>04</span>
+        </div>
+        <div class="hero-sign">LINHAS &amp; FORMAS<small>MÓVEIS PLANEJADOS</small></div>
+        <div class="scroll" aria-hidden="true">Scroll <i></i></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 02: TRANSFORMAÇÃO NARRATIVA SCROLL-DRIVEN (LINHAS & FORMAS EDITORIAL) -->
+    <section class="transform-story" id="sobre" aria-label="Transformação do espaço de projeto à realidade">
+      <div class="transform-stage">
+        <!-- Fundo Fullscreen Cinematográfico com Canvas 60fps -->
+        <div class="transform-media-full" aria-hidden="true">
+          <canvas class="transform-canvas" id="transformCanvas" width="1280" height="720"></canvas>
+          <div class="transform-full-scrim"></div>
+        </div>
+
+        <!-- Metadados de Canto Editoriais (Persistentes e Dinâmicos) -->
+        <div class="geo-corner-meta" aria-hidden="true">
+          <div class="geo-meta-time"><span class="time-val">00s</span> <span class="meta-dash">—</span></div>
+          <div class="geo-meta-scroll">
+            <span>Scroll</span>
+            <span class="scroll-dash">—</span>
+          </div>
+          <div class="geo-meta-counter"><span class="counter-cur">01</span> <span class="counter-sep">—</span> <span class="counter-tot">04</span></div>
+        </div>
+
+        <!-- Camada Gráfica Vetorial SVG (Linhas 1px & Pontos Focais) -->
+        <svg class="geo-svg-layer" viewBox="0 0 1000 625" preserveAspectRatio="none" aria-hidden="true">
+          <!-- Momento 01: FORMAS (Linha Orgânica sobre a Parede Curva) -->
+          <g class="geo-svg-group geo-svg-m1">
+            <circle class="geo-dot-pulse" cx="610" cy="220" r="14" />
+            <circle class="geo-dot-outer" cx="610" cy="220" r="5" />
+            <circle class="geo-dot-inner" cx="610" cy="220" r="1.5" />
+            <path class="geo-line geo-line-m1" d="M 610 220 C 670 170, 720 155, 775 155" />
+          </g>
+
+          <!-- Momento 02: DETALHES (Linha de Chamada sobre o Ripado) -->
+          <g class="geo-svg-group geo-svg-m2">
+            <circle class="geo-dot-pulse" cx="440" cy="245" r="14" />
+            <circle class="geo-dot-outer" cx="440" cy="245" r="5" />
+            <circle class="geo-dot-inner" cx="440" cy="245" r="1.5" />
+            <path class="geo-line geo-line-m2" d="M 440 245 L 680 235 L 820 235" />
+          </g>
+
+          <!-- Momento 03: MATÉRIA (Linha de Superfície sobre a Marcenaria com Recorte) -->
+          <g class="geo-svg-group geo-svg-m3">
+            <circle class="geo-dot-pulse" cx="760" cy="290" r="14" />
+            <circle class="geo-dot-outer" cx="760" cy="290" r="5" />
+            <circle class="geo-dot-inner" cx="760" cy="290" r="1.5" />
+            <path class="geo-line geo-line-m3" d="M 760 290 L 860 265" />
+          </g>
+
+          <!-- Momento 04: CONEXÕES / ESPAÇO (Arco que Ecoa a Curvatura do Piso) -->
+          <g class="geo-svg-group geo-svg-m4">
+            <circle class="geo-dot-pulse" cx="395" cy="565" r="14" />
+            <circle class="geo-dot-outer" cx="395" cy="565" r="5" />
+            <circle class="geo-dot-inner" cx="395" cy="565" r="1.5" />
+            <path class="geo-line geo-line-m4" d="M 395 565 C 260 565, 160 535, 80 500" />
+          </g>
+        </svg>
+
+        <!-- Camada Tipográfica Editorial Pura (Sem Caixas, Sem Cards) -->
+        <div class="geo-narrative-layer">
+          <!-- Momento 00s: Entrada -->
+          <div class="geo-moment geo-intro">
+            <h2 class="geo-intro-title">Espaços<br>que se vivem.</h2>
+            <p class="geo-intro-desc">Mais que móveis,<br>projetos para a vida real.</p>
+          </div>
+
+          <!-- Momento 01: FORMAS (Top-Right) -->
+          <div class="geo-moment geo-m1">
+            <h3 class="geo-label">FORMAS</h3>
+            <p class="geo-desc">que dão estrutura<br>a boas histórias.</p>
+          </div>
+
+          <!-- Momento 02: DETALHES (Mid-Right) -->
+          <div class="geo-moment geo-m2">
+            <h3 class="geo-label">DETALHES</h3>
+            <p class="geo-desc">que fazem<br>a diferença.</p>
+          </div>
+
+          <!-- Momento 03: MATÉRIA (Right) -->
+          <div class="geo-moment geo-m3">
+            <h3 class="geo-label">MATÉRIA</h3>
+            <p class="geo-desc">que permanece.</p>
+          </div>
+
+          <!-- Momento 04: CONEXÕES / ESPAÇO (Bottom-Left) -->
+          <div class="geo-moment geo-m4">
+            <h3 class="geo-label">CONEXÕES</h3>
+            <p class="geo-desc">que transformam<br>o ambiente.</p>
+          </div>
+
+          <!-- Momento 05: Linhas & Formas Final (Right) -->
+          <div class="geo-moment geo-final">
+            <h2 class="geo-final-title">Linhas<br>&amp; Formas</h2>
+            <p class="geo-final-desc">Projetos que<br>se vivem.</p>
+            <div class="geo-final-dash"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ambientes-section" id="ambientes">
+      <div class="ambientes-head reveal">
+        <div class="ambientes-head-left">
+          <div class="kicker">ONDE A MARCENARIA ENCONTRA A ROTINA</div>
+          <h2 class="section-title">Cada ambiente pede<br>uma solução diferente.</h2>
+        </div>
+        <div class="ambientes-action">
+          <p class="ambientes-lead">Projetamos móveis sob medida para acompanhar o espaço, a rotina e o jeito de viver de cada pessoa.</p>
+          <a class="outline-btn magnetic" href="projetos.html">Ver todos os projetos ↗</a>
+        </div>
+      </div>
+
+      <div class="ambientes-grid">
+        <!-- 01 COZINHAS -->
+        <a href="projetos.html?cat=cozinhas" class="ambiente-card card-left" data-flow="left" aria-label="Explorar Cozinhas Planejadas">
+          <div class="ambiente-media">
+            <img src="assets/images/cozinhas.png" alt="Cozinhas planejadas sob medida Linhas &amp; Formas" loading="lazy" decoding="async" width="800" height="1000">
+            <div class="inner-frame" aria-hidden="true"></div>
+          </div>
+          <div class="ambiente-caption">
+            <div class="ambiente-meta">
+              <span class="ambiente-idx">01</span>
+              <span class="ambiente-cat">Cozinhas</span>
+            </div>
+            <h3>Cozinhas</h3>
+            <p class="ambiente-sub">Organização, proporção e funcionalidade pensadas para o seu dia a dia.</p>
+            <span class="ambiente-link">Explorar cozinhas ↗</span>
+          </div>
+        </a>
+
+        <!-- 02 SALAS -->
+        <a href="projetos.html?cat=salas" class="ambiente-card card-right" data-flow="right" aria-label="Explorar Salas Integradas">
+          <div class="ambiente-media">
+            <img src="assets/images/salas.png" alt="Salas integradas e painéis Linhas &amp; Formas" loading="lazy" decoding="async" width="800" height="1000">
+            <div class="inner-frame" aria-hidden="true"></div>
+          </div>
+          <div class="ambiente-caption">
+            <div class="ambiente-meta">
+              <span class="ambiente-idx">02</span>
+              <span class="ambiente-cat">Salas</span>
+            </div>
+            <h3>Salas</h3>
+            <p class="ambiente-sub">Painéis, estantes e soluções integradas para um espaço mais fluido.</p>
+            <span class="ambiente-link">Explorar salas ↗</span>
+          </div>
+        </a>
+
+        <!-- 03 QUARTOS -->
+        <a href="projetos.html?cat=quartos" class="ambiente-card card-left" data-flow="left" aria-label="Explorar Quartos e Suítes">
+          <div class="ambiente-media">
+            <img src="assets/images/quartos.png" alt="Quartos e dormitórios sob medida Linhas &amp; Formas" loading="lazy" decoding="async" width="800" height="1000">
+            <div class="inner-frame" aria-hidden="true"></div>
+          </div>
+          <div class="ambiente-caption">
+            <div class="ambiente-meta">
+              <span class="ambiente-idx">03</span>
+              <span class="ambiente-cat">Quartos</span>
+            </div>
+            <h3>Quartos</h3>
+            <p class="ambiente-sub">Conforto, organização e aproveitamento de cada centímetro.</p>
+            <span class="ambiente-link">Explorar quartos ↗</span>
+          </div>
+        </a>
+
+        <!-- 04 ESCRITÓRIOS -->
+        <a href="projetos.html?cat=escritorios" class="ambiente-card card-right" data-flow="right" aria-label="Explorar Escritórios e Home Office">
+          <div class="ambiente-media">
+            <img src="assets/images/escritorios.png" alt="Escritórios e home office inteligente Linhas &amp; Formas" loading="lazy" decoding="async" width="800" height="1000">
+            <div class="inner-frame" aria-hidden="true"></div>
+          </div>
+          <div class="ambiente-caption">
+            <div class="ambiente-meta">
+              <span class="ambiente-idx">04</span>
+              <span class="ambiente-cat">Escritórios</span>
+            </div>
+            <h3>Escritórios</h3>
+            <p class="ambiente-sub">Um espaço de trabalho pensado para funcionar melhor.</p>
+            <span class="ambiente-link">Explorar escritórios ↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="process-story" id="processo">
+      <div class="process-stage">
+        <!-- Indicador Inicial Sutil -->
+        <div class="process-hint" aria-hidden="true">
+          <span>Role para descobrir</span>
+          <div class="hint-line"></div>
+        </div>
+
+        <!-- Moldura da Fotografia com Expansão Contínua -->
+        <div class="process-media-frame">
+          <img src="assets/images/unsplash/process-marcenaria.jpg" alt="Detalhe de marcenaria sob medida Linhas &amp; Formas" loading="lazy" decoding="async" width="1000" height="1200">
+          <div class="process-media-scrim" aria-hidden="true"></div>
+          <div class="inner-frame" aria-hidden="true"></div>
+        </div>
+
+        <!-- Grid de Conteúdo Distribuído em Camadas -->
+        <div class="process-content-grid">
+          <!-- Coluna Esquerda: Narrativa & Tipografia Editorial -->
+          <div class="process-narrative">
+            <div class="kicker">Do projeto à instalação</div>
+            <h2 class="process-title">Acompanhamento<br>de ponta a ponta.</h2>
+            <div class="process-accent-line"></div>
+            <p class="process-desc">Medição no local, desenvolvimento técnico em 3D, produção com matéria-prima selecionada e instalação precisa. Cuidado em cada detalhe para que o resultado final seja exatamente o planejado.</p>
+            <div class="process-actions">
+              <a class="outline-btn magnetic" href="projetos.html">Conheça nossos projetos ↗</a>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: 4 Etapas Lineares com Linha Conectora SVG -->
+          <div class="process-steps-track">
+            <svg class="process-connector-svg" viewBox="0 0 40 320" fill="none" preserveAspectRatio="none" aria-hidden="true">
+              <path class="connector-path-bg" d="M 20 20 Q 10 100 20 180 T 20 300" stroke="rgba(241, 236, 227, 0.16)" stroke-width="2" stroke-linecap="round" />
+              <path class="connector-path-fill" d="M 20 20 Q 10 100 20 180 T 20 300" stroke="var(--warm)" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <div class="process-step-node" data-step="1">
+              <div class="step-badge"><span>01</span></div>
+              <div class="step-text">
+                <strong>Medição &amp; Estudo do espaço</strong>
+                <small>Avaliação milimétrica in loco</small>
+              </div>
+            </div>
+            <div class="process-step-node" data-step="2">
+              <div class="step-badge"><span>02</span></div>
+              <div class="step-text">
+                <strong>Desenvolvimento do projeto 3D</strong>
+                <small>Volumetria e especificações reais</small>
+              </div>
+            </div>
+            <div class="process-step-node" data-step="3">
+              <div class="step-badge"><span>03</span></div>
+              <div class="step-text">
+                <strong>Produção com materiais nobres</strong>
+                <small>MDF selecionado &amp; ferragens premium</small>
+              </div>
+            </div>
+            <div class="process-step-node" data-step="4">
+              <div class="step-badge"><span>04</span></div>
+              <div class="step-text">
+                <strong>Instalação limpa e precisa</strong>
+                <small>Montagem especializada e alinhada</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Micro-Badge / Indicador de Canto -->
+          <div class="process-micro-badge" aria-hidden="true">
+            <div class="badge-dot"></div>
+            <span>Qualidade em cada etapa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="material" id="materiais">
+      <div class="material-head reveal">
+        <div class="material-head-left">
+          <div class="kicker">PRECISÃO &amp; MATERIALIDADE</div>
+          <h2 class="section-title">O detalhe<br>faz a diferença.</h2>
+        </div>
+        <div class="material-head-info">
+          <p class="material-head-desc">Escolhemos materiais, acabamentos e ferragens pensando não apenas em como o móvel será visto, mas em como ele será usado todos os dias.</p>
+          <div class="material-head-hint">Toque nos pontos para focar</div>
+        </div>
+      </div>
+      <div class="material-stage" id="materialStage">
+        <img src="assets/images/materialidade.png" alt="Detalhes de materialidade, bancada de pedra, puxador cava e iluminação linear" loading="lazy" decoding="async" width="1280" height="720">
+        <div class="stage-dimmer" aria-hidden="true"></div>
+        
+        <!-- 4 Hotspots Calibrados -->
+        <button class="hotspot h1 active" data-index="0" role="button" aria-label="Ver detalhe 01: Material" aria-pressed="true" style="top: 18%; left: 66%;">
+          <span class="hotspot-pulse"></span>
+          <span class="hotspot-dot">+</span>
+        </button>
+        <button class="hotspot h2" data-index="1" role="button" aria-label="Ver detalhe 02: Ferragem" aria-pressed="false" style="top: 48%; left: 47%;">
+          <span class="hotspot-pulse"></span>
+          <span class="hotspot-dot">+</span>
+        </button>
+        <button class="hotspot h3" data-index="2" role="button" aria-label="Ver detalhe 03: Acabamento" aria-pressed="false" style="top: 72%; left: 68%;">
+          <span class="hotspot-pulse"></span>
+          <span class="hotspot-dot">+</span>
+        </button>
+        <button class="hotspot h4" data-index="3" role="button" aria-label="Ver detalhe 04: Iluminação" aria-pressed="false" style="top: 38%; left: 62%;">
+          <span class="hotspot-pulse"></span>
+          <span class="hotspot-dot">+</span>
+        </button>
+        
+        <!-- Modal / Layer Editorial Interativo -->
+        <div class="material-popover" id="materialPopover" role="dialog" aria-modal="false" aria-labelledby="popoverTitle">
+          <div class="popover-header">
+            <span class="popover-badge" id="popoverNum">01 — MATERIAL</span>
+            <button class="popover-close" id="popoverClose" aria-label="Fechar detalhe">×</button>
+          </div>
+          <h3 id="popoverTitle">Material</h3>
+          <p id="popoverDesc">Superfícies minerais com alta resistência, veios contínuos e corte milimétrico para bancadas e áreas úmidas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta cta-conversion" id="contato">
+      <div class="cta-bg-layer" aria-hidden="true">
+        <img src="assets/images/cta.png" alt="Ambiente planejado Linhas &amp; Formas com marcenaria sob medida" class="cta-bg-img" loading="lazy" decoding="async" width="1920" height="1080">
+        <div class="cta-bg-scrim"></div>
+      </div>
+
+      <div class="cta-inner reveal">
+        <!-- Coluna Esquerda: Headline, Texto, CTAs -->
+        <div class="cta-col-main">
+          <div class="kicker">VAMOS COMEÇAR?</div>
+          <h2 class="cta-title">Vamos tirar seu<br>projeto do papel.</h2>
+          <div class="cta-body">
+            <p>Conte o que você está planejando.</p>
+            <p>Nossa equipe entra em contato para entender seu espaço e encontrar a melhor solução para você.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="wa magnetic" href="https://wa.me/5573988541250" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp com a Linhas &amp; Formas">
+              <i></i> FALAR PELO WHATSAPP ↗
+            </a>
+            <a class="outline-btn magnetic" href="https://wa.me/5573988541250?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20meu%20projeto." target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento para seu projeto">
+              SOLICITAR ORÇAMENTO ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna Centro: Informações de Atendimento -->
+        <div class="cta-col-info">
+          <div class="cta-info-block">
+            <span class="info-label">ATENDIMENTO</span>
+            <strong>Itabuna e Região</strong>
+          </div>
+          <div class="cta-info-block">
+            <span class="info-label">HORÁRIO</span>
+            <strong>Segunda — Sexta</strong>
+            <small>08h — 18h</small>
+          </div>
+          <div class="cta-info-block">
+            <span class="info-label">CONTATO DIRETO</span>
+            <strong><a href="tel:+5573988541250">(73) 98854-1250</a></strong>
+            <small><a href="https://instagram.com/linhaseformas.mp" target="_blank" rel="noopener noreferrer">@linhaseformas.mp</a></small>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Suporte visual cta.png (área limpa de respiro para a marcenaria) -->
+        <div class="cta-col-visual-space" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">LINHAS & FORMAS<small>MÓVEIS PLANEJADOS</small></div>
+      </div>
+      <div>
+        <div class="foot-title">Qualidade.<br>Elegância.<br>Seu espaço.</div>
+      </div>
+      <div class="foot-side">
+        R. Belém, 620 — Santo Antônio<br>Itabuna — BA<br><br>(73) 98854-1250<br>@linhaseformas.mp
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Linhas & Formas</span>
+      <span><a href="projetos.html">Projetos ↗</a> · WhatsApp</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
