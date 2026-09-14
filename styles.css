@@ -4236,6 +4236,11 @@ footer {
     padding: 0 !important;
   }
 
+  /* 3D Story Editorial Mobile */
+  .geo-svg-layer {
+    display: none !important;
+  }
+
   .geo-intro {
     left: 20px !important;
     right: 20px !important;
@@ -4256,21 +4261,14 @@ footer {
 
   .geo-m1,
   .geo-m2,
-  .geo-m3 {
+  .geo-m3,
+  .geo-m4 {
     top: auto !important;
-    bottom: 48px !important;
-    right: auto !important;
+    bottom: clamp(36px, 7vh, 56px) !important;
     left: 20px !important;
     right: 20px !important;
     max-width: none !important;
     text-align: left !important;
-  }
-
-  .geo-m4 {
-    bottom: 48px !important;
-    left: 20px !important;
-    right: 20px !important;
-    max-width: none !important;
   }
 
   .geo-final {
@@ -4287,12 +4285,36 @@ footer {
   }
 
   .geo-label {
-    font-size: 22px !important;
-    margin-bottom: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: var(--warm) !important;
+    margin-bottom: 8px !important;
+    font-weight: 600 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95) !important;
+  }
+
+  .geo-label::before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background: var(--warm) !important;
+    box-shadow: 0 0 8px rgba(223, 200, 175, 0.8) !important;
   }
 
   .geo-desc {
-    font-size: 13px !important;
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+    font-weight: 400 !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.02em !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 0, 0, 0.9) !important;
   }
 
   /* Ambientes Cards Mobile */
