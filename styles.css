@@ -3771,16 +3771,83 @@ footer {
 
 .foot-bottom {
   border-top: 1px solid var(--lightline);
-  padding-top: 20px;
+  padding-top: 24px;
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
-  color: #7a746c;
-  letter-spacing: 0.05em;
+  align-items: center;
+  font-size: 11px;
+  color: #8a847c;
+  letter-spacing: 0.04em;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.foot-bottom-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.foot-bottom a {
+  color: #8a847c;
+  text-decoration: none;
+  transition: color 0.25s var(--ease-editorial);
 }
 
 .foot-bottom a:hover {
   color: var(--cream);
+}
+
+.foot-dev-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #8a847c;
+  font-size: 11px;
+  transition: color 0.25s var(--ease-editorial), transform 0.25s var(--ease-editorial);
+}
+
+.foot-dev-badge:hover {
+  color: var(--cream);
+  transform: translateY(-1px);
+}
+
+.foot-dev-badge strong {
+  color: #b0aaa0;
+  font-weight: 500;
+  transition: color 0.25s var(--ease-editorial);
+}
+
+.foot-dev-badge:hover strong {
+  color: #ffffff;
+}
+
+.foot-dev-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000000;
+  border: 1px solid rgba(241, 236, 227, 0.2);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  flex-shrink: 0;
+}
+
+.foot-dev-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.foot-dev-badge:hover .foot-dev-logo {
+  border-color: rgba(241, 236, 227, 0.6);
+  box-shadow: 0 0 12px rgba(241, 236, 227, 0.25);
+  transform: scale(1.08);
 }
 
 /* --------------------------------------------------------------------------
@@ -5038,8 +5105,18 @@ footer {
 
   .foot-bottom {
     flex-direction: column !important;
-    gap: 10px !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
     text-align: left !important;
+  }
+
+  .foot-bottom-links {
+    display: flex !important;
+    gap: 16px !important;
+  }
+
+  .foot-dev-badge {
+    margin-top: 4px !important;
   }
 
   /* Lightbox Mobile */
