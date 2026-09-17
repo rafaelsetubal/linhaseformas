@@ -5975,6 +5975,314 @@ footer {
   }
 }
 
+/* ==========================================================================
+   SEÇÃO DE LOCALIZAÇÃO OFICIAL — BR-415 (ARQUITETURA DE ROTA & MAPA)
+   ========================================================================== */
+.location-section {
+  background: var(--stone-warm);
+  color: var(--ink);
+  padding: clamp(64px, 7.5vw, 120px) clamp(20px, 5vw, 64px);
+  position: relative;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  box-sizing: border-box;
+}
+
+.location-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+
+/* Coluna de Informações */
+.location-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.location-kicker {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.location-pin-icon {
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.location-title {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin: 0 0 18px;
+}
+
+.location-desc {
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.6;
+  color: #4a443e;
+  margin: 0 0 28px;
+  max-width: 520px;
+}
+
+/* Card com resumo de referência */
+.location-ref-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 520px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.location-ref-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ref-label {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.ref-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.ref-sub {
+  font-size: 13px;
+  color: #554f48;
+}
+
+.location-ref-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--line-subtle);
+}
+
+/* Botões / CTAs */
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.location-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  transition: all var(--duration-normal) var(--ease-editorial);
+  cursor: pointer;
+}
+
+.location-btn-primary:hover {
+  background: #2b2622;
+  border-color: #2b2622;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(23, 20, 18, 0.2);
+}
+
+.location-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--ink);
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--line-strong);
+  transition: all var(--duration-normal) var(--ease-editorial);
+  cursor: pointer;
+}
+
+.location-btn-secondary:hover {
+  background: rgba(23, 20, 18, 0.05);
+  border-color: var(--ink);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* Coluna do Mapa */
+.location-map-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.location-map-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 380px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--dark-surface);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+}
+
+.location-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.location-map-overlay-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 17, 15, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(241, 236, 227, 0.18);
+  color: var(--cream);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.map-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 8px #25d366;
+}
+
+.location-map-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+  padding: 0 4px;
+}
+
+.location-map-caption a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity var(--duration-fast);
+}
+
+.location-map-caption a:hover {
+  opacity: 0.7;
+}
+
+/* Responsividade Mobile & Tablet */
+@media (max-width: 960px) {
+  .location-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .location-title {
+    font-size: clamp(28px, 6.5vw, 42px);
+  }
+
+  .location-ref-card {
+    max-width: 100%;
+  }
+
+  .location-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .location-btn-primary,
+  .location-btn-secondary {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .location-map-card {
+    aspect-ratio: 16 / 11;
+    min-height: 290px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-section {
+    padding: 52px 18px;
+  }
+
+  .location-ref-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .location-map-card {
+    min-height: 260px;
+  }
+
+  .location-map-caption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+
 
 
 
