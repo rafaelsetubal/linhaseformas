@@ -7,7 +7,7 @@ const PROJECTS_DATA = [
   {
     id: "01",
     slug: "cozinha-gourmet-integrada",
-    url: "projeto-01.html",
+    url: "projetos.html",
     title: "Cozinha Gourmet Integrada",
     shortTitle: "01 · Cozinha Gourmet",
     category: "cozinha",
@@ -35,7 +35,7 @@ const PROJECTS_DATA = [
   {
     id: "02",
     slug: "suite-master-closet-integrado",
-    url: "projeto-02.html",
+    url: "projetos.html",
     title: "Suíte Master & Closet Integrado",
     shortTitle: "02 · Suíte Master",
     category: "quarto",
@@ -62,7 +62,7 @@ const PROJECTS_DATA = [
   {
     id: "03",
     slug: "living-home-theater-contemporaneo",
-    url: "projeto-03.html",
+    url: "projetos.html",
     title: "Living & Home Theater Contemporâneo",
     shortTitle: "03 · Living Contemporâneo",
     category: "sala",
@@ -89,7 +89,7 @@ const PROJECTS_DATA = [
   {
     id: "04",
     slug: "closet-walk-in-iluminado",
-    url: "projeto-02.html",
+    url: "projetos.html",
     title: "Closet Walk-in Iluminado",
     shortTitle: "04 · Closet Inteligente",
     category: "closet",
@@ -114,7 +114,7 @@ const PROJECTS_DATA = [
   {
     id: "05",
     slug: "gabinete-executivo-home-office",
-    url: "projeto-01.html",
+    url: "projetos.html",
     title: "Gabinete Executivo & Home Office",
     shortTitle: "05 · Espaço Corporativo",
     category: "escritorio",
@@ -139,7 +139,7 @@ const PROJECTS_DATA = [
   {
     id: "06",
     slug: "cozinha-minimalista-louceiro",
-    url: "projeto-01.html",
+    url: "projetos.html",
     title: "Cozinha Minimalista & Louceiro Oculto",
     shortTitle: "06 · Cozinha Minimalista",
     category: "cozinha",
@@ -163,7 +163,7 @@ const PROJECTS_DATA = [
   {
     id: "07",
     slug: "sala-jantar-aparador-flutuante",
-    url: "projeto-03.html",
+    url: "projetos.html",
     title: "Sala de Jantar & Aparador Flutuante",
     shortTitle: "07 · Sala de Jantar",
     category: "sala",
@@ -187,7 +187,7 @@ const PROJECTS_DATA = [
   {
     id: "08",
     slug: "suite-hospedes-bancada-multiuso",
-    url: "projeto-02.html",
+    url: "projetos.html",
     title: "Suíte de Hóspedes & Multiuso",
     shortTitle: "08 · Suíte de Hóspedes",
     category: "quarto",

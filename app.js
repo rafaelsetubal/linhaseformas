@@ -1813,7 +1813,134 @@ document.addEventListener('DOMContentLoaded', () => {
         ScrollTrigger.refresh();
       }, 150);
     });
+
+    // ========================================================================
+    // 06. MODAL LIGHTBOX INTERATIVO DE PROJETOS (FULL GALLERY)
+    // ========================================================================
+    const projectModal = document.getElementById('projectModal');
+    if (projectModal && typeof PROJECTS_DATA !== 'undefined') {
+      const modalBackdrop = document.getElementById('modalBackdrop');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const modalMainImg = document.getElementById('modalMainImg');
+      const modalCategoryBadge = document.getElementById('modalCategoryBadge');
+      const modalLocation = document.getElementById('modalLocation');
+      const modalArea = document.getElementById('modalArea');
+      const modalYear = document.getElementById('modalYear');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDesc = document.getElementById('modalDesc');
+      const modalHighlights = document.getElementById('modalHighlights');
+      const modalWaBtn = document.getElementById('modalWaBtn');
+      const modalThumbs = document.getElementById('modalThumbs');
+      const modalPrevBtn = document.getElementById('modalPrevBtn');
+      const modalNextBtn = document.getElementById('modalNextBtn');
+      const modalCounter = document.getElementById('modalCounter');
+
+      let currentProjectIndex = 0;
+
+      const renderProjectModal = (index) => {
+        if (index < 0) index = PROJECTS_DATA.length - 1;
+        if (index >= PROJECTS_DATA.length) index = 0;
+        currentProjectIndex = index;
+
+        const proj = PROJECTS_DATA[index];
+        if (!proj) return;
+
+        modalMainImg.src = proj.coverImage;
+        modalMainImg.alt = proj.title;
+        modalCategoryBadge.textContent = proj.categoryLabel || proj.category;
+        modalLocation.textContent = proj.location || 'Itabuna — BA';
+        modalArea.textContent = proj.area || '';
+        modalYear.textContent = proj.year || '2026';
+        modalTitle.textContent = proj.title;
+        modalDesc.textContent = proj.description;
+
+        // Highlights list
+        modalHighlights.innerHTML = '';
+        if (proj.highlights && proj.highlights.length > 0) {
+          proj.highlights.forEach((h) => {
+            const li = document.createElement('li');
+            li.textContent = h;
+            modalHighlights.appendChild(li);
+          });
+        }
+
+        // WhatsApp button link pre-filled
+        const waText = encodeURIComponent(`Olá! Vi o projeto "${proj.title}" no site da Linhas & Formas e gostaria de solicitar um orçamento similar.`);
+        modalWaBtn.href = `https://wa.me/5573988541250?text=${waText}`;
+
+        // Thumbnails
+        modalThumbs.innerHTML = '';
+        const galleryImages = proj.gallery && proj.gallery.length > 0 ? proj.gallery : [{ src: proj.coverImage, title: proj.title }];
+        
+        if (galleryImages.length > 1) {
+          modalThumbs.style.display = 'flex';
+          galleryImages.forEach((imgObj, i) => {
+            const thumb = document.createElement('button');
+            thumb.className = `modal-thumb ${i === 0 ? 'active' : ''}`;
+            thumb.setAttribute('aria-label', `Ver foto ${i + 1}: ${imgObj.title || proj.title}`);
+            thumb.innerHTML = `<img src="${imgObj.src}" alt="${imgObj.title || proj.title}" loading="lazy">`;
+            thumb.addEventListener('click', () => {
+              modalMainImg.src = imgObj.src;
+              modalThumbs.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+              thumb.classList.add('active');
+            });
+            modalThumbs.appendChild(thumb);
+          });
+        } else {
+          modalThumbs.style.display = 'none';
+        }
+
+        modalCounter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(PROJECTS_DATA.length).padStart(2, '0')}`;
+      };
+
+      const openModal = (projectId) => {
+        const foundIndex = PROJECTS_DATA.findIndex(p => p.id === projectId || p.slug === projectId);
+        renderProjectModal(foundIndex !== -1 ? foundIndex : 0);
+        projectModal.classList.add('active');
+        projectModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeModal = () => {
+        projectModal.classList.remove('active');
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      // Card triggers
+      document.querySelectorAll('.portfolio-grid .p-card').forEach((card) => {
+        const pId = card.getAttribute('data-project-id');
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal(pId);
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal(pId);
+          }
+        });
+      });
+
+      if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+      if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+      if (modalPrevBtn) {
+        modalPrevBtn.addEventListener('click', () => renderProjectModal(currentProjectIndex - 1));
+      }
+      if (modalNextBtn) {
+        modalNextBtn.addEventListener('click', () => renderProjectModal(currentProjectIndex + 1));
+      }
+
+      window.addEventListener('keydown', (e) => {
+        if (!projectModal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') renderProjectModal(currentProjectIndex - 1);
+        if (e.key === 'ArrowRight') renderProjectModal(currentProjectIndex + 1);
+      });
+    }
   }
 });
+
 
 
